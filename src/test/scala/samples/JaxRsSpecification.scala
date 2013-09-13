@@ -21,7 +21,7 @@ import javax.ws.rs.core.MediaType
 
 abstract class JaxRsSpecification extends Specification {
   
-  var token: String = Base64.encode("login:password"getBytes)
+  var token: String = Base64.encode("login:password".getBytes)
 
   var client: Given[ Client ] = ( baseUrl: String) =>
      ClientBuilder.newClient( new ClientConfig().property( "baseUrl", baseUrl ))
